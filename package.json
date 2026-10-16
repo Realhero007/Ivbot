@@ -1,13 +1,13 @@
 {
   "name": "fast-otp-bot",
   "version": "1.0.0",
-  "description": "Telegram Fast OTP Bot with IvaSMS Socket",
-  "main": "index.js",
+  "main": "bot.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node bot.js"
   },
   "dependencies": {
     "grammy": "^1.21.1",
+    "puppeteer": "^22.0.0",
     "socket.io-client": "^4.7.5",
     "undici": "^6.6.2"
   }
