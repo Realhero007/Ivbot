@@ -1,0 +1,32 @@
+{
+  "numbers": [],
+  "admins": [6916044653],
+  "users": [],
+  "services": [
+    "Telegram",
+    "WhatsApp",
+    "Imo",
+    "Instagram",
+    "Facebook",
+    "TikTok",
+    "Uber"
+  ],
+  "serviceRates": {},
+  "balances": {},
+  "withdrawals": [],
+  "sentOtps": [],
+  "apiUrls": [
+    "https://panel.lamix.org/api/v1/messages?token=F03xiioltLwvYbIlS470UQ9XuVWkp-KlqC5f_r2yXhs",
+    "http://169.58.213.56/crapi/ALEIUS/viewstats?token=dsglfRknOC2y_94AAD164B4ED"
+  ],
+  "checkDelay": 4000,
+  "numberQty": 1,
+  "customOtpMsg": "🚀 <b>FAST OTP RECEIVED!</b>\n\n📱 <code>{service}</code> | {flag} <code>{country}</code> | 📞 <code>+{phone}</code>\n\n💬 <i>\"{message}\"</i>\n\n👉 <code>{code}</code> <i>(Tap to Copy)</i>\n\n💰 <b>+৳{reward} BDT added to your balance!</b>",
+  "ivasmsConfig": {
+    "socketUrl": "https://www.ivasms.com",
+    "path": "/live/socket.io/",
+    "userName": "Md Wahed",
+    "email": "pervestrader@gmail.com",
+    "cookie": ""
+  }
+}
