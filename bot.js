@@ -3,6 +3,7 @@ const { fetch } = require("undici");
 const { io } = require("socket.io-client");
 const fs = require("fs");
 const path = require("path");
+const { startIvaSmsPuppeteer } = require('./ivasms_puppeteer');
 
 // --- Environment Variables ---
 const BOT_TOKEN = process.env.BOT_TOKEN; 
