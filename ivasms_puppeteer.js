@@ -20,12 +20,12 @@ async function startIvaSmsPuppeteer(botToken, groupId, cookieString) {
                 '--disable-accelerated-2d-canvas',
                 '--no-first-run',
                 '--no-zygote',
-                '--single-process',
                 '--disable-gpu',
                 '--disable-software-rasterizer',
                 '--disable-dev-tools',
                 '--no-default-browser-check',
-                '--disable-features=IsolateOrigins,site-per-process'
+                '--disable-extensions',
+                '--disable-component-extensions-with-background-pages'
             ]
         });
 
@@ -122,7 +122,7 @@ async function startIvaSmsPuppeteer(botToken, groupId, cookieString) {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     chat_id: groupId,
-                    text: `❌ <b>IvaSMS Login Failed!</b>\n\n⚠️ Cookie-ti expired hoye geche.\n\n👉 <code>/admin</code> panel-e giye <b>⚡ IvaSMS Settings > 🔄 Update Cookie</b> theke new Cookie add korun.`,
+                    text: `❌ <b>IvaSMS Login Failed!</b>\n\n⚠️ Cookie-টি expired হয়ে গেছে।\n\n👉 <code>/admin</code> panel-এ গিয়ে <b>⚡ IvaSMS Settings > 🔄 Update Cookie</b> থেকে নতুন Cookie দিন।`,
                     parse_mode: 'HTML'
                 })
             }).catch(()=>{});
