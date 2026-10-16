@@ -1,8 +1,9 @@
 FROM node:18-slim
 
-# Install Chromium & necessary Linux dependencies
+# Install Chromium, dbus & essential dependencies
 RUN apt-get update && apt-get install -y \
     chromium \
+    dbus \
     fonts-liberation \
     libasound2 \
     libatk-bridge2.0-0 \
