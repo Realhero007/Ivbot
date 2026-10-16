@@ -11,7 +11,7 @@ async function startIvaSmsPuppeteer(botToken, groupId, cookieString) {
         console.log("🚀 Launching Low-RAM Puppeteer Chromium Instance...");
 
         currentBrowser = await puppeteer.launch({
-            executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || null,
+            executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || '/usr/bin/chromium',
             headless: "new",
             args: [
                 '--no-sandbox',
@@ -21,7 +21,11 @@ async function startIvaSmsPuppeteer(botToken, groupId, cookieString) {
                 '--no-first-run',
                 '--no-zygote',
                 '--single-process',
-                '--disable-gpu'
+                '--disable-gpu',
+                '--disable-software-rasterizer',
+                '--disable-dev-tools',
+                '--no-default-browser-check',
+                '--disable-features=IsolateOrigins,site-per-process'
             ]
         });
 
@@ -49,7 +53,7 @@ async function startIvaSmsPuppeteer(botToken, groupId, cookieString) {
             await currentBrowser.close().catch(()=>{});
         });
 
-        // Save RAM by blocking images, CSS, fonts & media
+        // Save RAM by blocking heavy resources
         await page.setRequestInterception(true);
         page.on('request', (req) => {
             if (['image', 'stylesheet', 'font', 'media'].includes(req.resourceType())) {
