@@ -1,6 +1,6 @@
 FROM node:18-slim
 
-# Install Chromium & Linux dependencies
+# Install Chromium & necessary Linux dependencies
 RUN apt-get update && apt-get install -y \
     chromium \
     fonts-liberation \
@@ -33,7 +33,7 @@ RUN apt-get update && apt-get install -y \
     libxi6 \
     libxrandr2 \
     libxrender1 \
-    libss1 \
+    libssl3 \
     libxtst6 \
     ca-certificates \
     procps \
